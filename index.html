@@ -14,15 +14,17 @@
         <img onclick="showGallery()" src="img/LOGO.png" alt="">
         <ul>
             <li onclick="showGallery()"> Gallery</li>
-            <li> My Memes</li>
+            <li onclick="showSavedMeme()"> My Memes</li>
             <li> About</li>
         </ul>
     </nav>
-    <input class="search" type="text" name="search-meme" placeholder="search meme!"
-    oninput="onSetFilterBy(this.value)">
+    <input class="search" type="text" name="search-meme" placeholder="search meme!" oninput="onSetFilterBy(this.value)">
 
+    <div class="saved-memes">
+
+    </div>
     <div class="gallery-container">
-        
+
     </div>
 
     <div class="meme-edit">
@@ -79,17 +81,10 @@
     </div>
 
 
-
-
-
-
-
-
-
-
     <script src="js/services/meme-service.js"></script>
     <script src="js/util.js"></script>
     <script src="js/galleryController.js"></script>
+    <script src="js/saveMemeController.js"></script>
     <script src="js/memeController.js"></script>
 </body>
 

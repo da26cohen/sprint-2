@@ -27,7 +27,6 @@ function renderMeme() {
             drawText(txt, align, size, color, font, pos.x, pos.y)
             if (idx === lineIdx ) {
                 drawRect(pos.x, pos.y, size)
-                // removeRect(pos.x, pos.y, size)
             }
         })
     }
@@ -47,11 +46,6 @@ function drawText(txt, align, size, color, font, x = 200, y = 50) {
 
 function drawRect(x, y, size) {
     gCtx.strokeStyle = 'black'
-    gCtx.strokeRect(0, y, 500, size)
-}
-
-function removeRect(x, y, size) {
-   
     gCtx.strokeRect(0, y, 500, size)
 }
 
@@ -107,6 +101,11 @@ function onMemeClick(idx) {
     elMemeEdit.style.display = 'grid'
     updateImg(idx)
     renderMeme()
+}
+
+function onSave(){
+    let url = gElCanvas.toDataURL()
+    saveMeme(url)
 }
 
 function onDelete() {
@@ -169,9 +168,6 @@ function onUp() {
 function addListeners() {
     addMouseListeners()
     addTouchListeners()
-    window.addEventListener('resize', () => {
-        onInit()
-    })
 }
 
 function addMouseListeners() {
@@ -202,6 +198,11 @@ function getEvPos(ev) {
     return pos
 }
 
+function showSavedMeme(){
+   let url = gElCanvas.toDataURL()
+    const savedMemes = loadFromStorage(KEY)
+    console.log(savedMemes);
+}
 
 function onSetFilterBy(filter) {
     console.log(filter);

@@ -131,3 +131,6 @@ img:hover {
     border-radius: 25px;
     height: 8vh;
 }
+.saved-memes{
+    display: none;
+}
