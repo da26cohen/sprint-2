@@ -25,7 +25,7 @@ function renderMeme() {
         lines.forEach((line, idx) => {
             const { txt, align, size, color, font, pos, isDrag } = line
             drawText(txt, align, size, color, font, pos.x, pos.y)
-            if (idx === lineIdx ) {
+            if (idx === lineIdx) {
                 drawRect(pos.x, pos.y, size)
             }
         })
@@ -103,8 +103,8 @@ function onMemeClick(idx) {
     renderMeme()
 }
 
-function onSave(){
-    let url = gElCanvas.toDataURL()
+function onSave() {
+    let url = gElCanvas.toDataURL('image/jpeg')
     saveMeme(url)
 }
 
@@ -117,6 +117,7 @@ function onDelete() {
 
 function showGallery() {
     deleteLines()
+    document.querySelector('.saved-memes').style.display = 'none'
     const elSearch = document.querySelector('.search')
     const elGallery = document.querySelector('.gallery-container')
     const elMemeEdit = document.querySelector('.meme-edit')
@@ -198,14 +199,13 @@ function getEvPos(ev) {
     return pos
 }
 
-function showSavedMeme(){
-   let url = gElCanvas.toDataURL()
-    const savedMemes = loadFromStorage(KEY)
-    console.log(savedMemes);
+function showSavedMeme() {
+    document.querySelector('.meme-edit').style.display = 'none'
+    document.querySelector('.saved-memes').style.display = 'block'
+renderSavedMemes()
 }
 
 function onSetFilterBy(filter) {
-    console.log(filter);
     setFilterBy(filter)
     renderGallery()
 }

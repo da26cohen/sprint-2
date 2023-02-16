@@ -1,16 +1,16 @@
 'use strict'
 
 
-// renderSavedMemes()
+renderSavedMemes()
 
 function renderSavedMemes(){
     const savedMemesUrl = loadFromStorage(KEY)
+    document.querySelector('.gallery-container').style.display =  'none'
     document.querySelector('.saved-memes').style.display =  'block'
 
     var strHtmls = 
-        `<div class="meme-unit" onclick="onMemeClick(${gMeme.selectedImgId})">
-        style="background-image: ${savedMemesUrl}">`
+    `<div class="meme-unit" onclick="onMemeClick1()">
+    <img src="${savedMemesUrl}" alt="">
+    </div>`
         document.querySelector('.saved-memes').innerHTML = strHtmls
-
-
 }

@@ -30,9 +30,15 @@ ul {
 }
 
 li {
-
+    color: black;
+    font-family: fantasy;
     font-size: 2em;
     cursor: pointer;
+    transition: 0.3s;
+}
+li:hover{
+    color: blue;
+    scale: 1.15;
 }
 
 .gallery-container {
@@ -58,8 +64,11 @@ li {
 }
 
 .tools-place {
+    display: grid;
+    justify-content: center;
+    align-content: center;
     max-width: 500px;
-    font-size: 1.5em;
+    font-size: 2em;
     padding: 2px;
 }
 
@@ -105,6 +114,33 @@ img:hover {
     }
 }
 
+@media screen and (max-width: 550px) {
+    nav {
+        grid-template-columns: 1fr 5fr;
+        gap: 0.5em;
+    }
+
+    li {
+
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .meme-edit {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .meme-unit img {
+        max-width: 40vw;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+        gap: 0px;
+    }
+}
+
 .stiker-btn {
     font-size: 2em;
     cursor: pointer;
@@ -123,14 +159,16 @@ img:hover {
     margin: 2px;
 }
 
-.font-form{
+.font-form {
     height: 41px;
     border-radius: 50%;
 }
-.text-input{
+
+.text-input {
     border-radius: 25px;
     height: 8vh;
 }
-.saved-memes{
+
+.saved-memes {
     display: none;
 }
