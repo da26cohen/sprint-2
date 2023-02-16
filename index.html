@@ -18,7 +18,8 @@
             <li> About</li>
         </ul>
     </nav>
-    <input class="search" type="text" name="search-meme" placeholder="search meme!" oninput="onSetFilterBy(this.value)">
+    <input class="search" type="text" name="search-meme" placeholder="search meme 🔍"
+        oninput="onSetFilterBy(this.value)">
 
     <div class="saved-memes">
 
@@ -37,6 +38,7 @@
                 <div>
 
                     <!-- <button onclick="onSaveMeme()">💾</button> -->
+                    <img class="editor-btns facebook" onclick="onUploadImg()" src="img/facebook-logo.png">
                     <img class="editor-btns btn-save" onclick="onSave()" src="img/save.png">
                     <img class="editor-btns btn-delete" onclick="onDelete(4)" src="img/delete.png">
 
@@ -58,7 +60,7 @@
                     <option value="Impact">Impact</option>
                     <option value="Arial">Arial</option>
                 </select>
-                <input oninput="onSetColor(this.value)" type="color">
+                <input class="select-color" oninput="onSetColor(this.value)" type="color">
 
             </div>
 
@@ -71,9 +73,8 @@
             </div>
             <div class="upload">
                 <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
-                <img class="editor-btns facebook" onclick="onUploadImg()" src="img/facebook-logo.png">
+
                 <!-- <button class="btn" onclick="onUploadImg()">share!</button> -->
-                <a href="#" onclick="downloadCanvas(this)" download="file-name">💾</a>
 
             </div>
         </div>

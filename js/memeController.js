@@ -11,7 +11,6 @@ function onInit() {
     gCtx = gElCanvas.getContext('2d')
     renderMeme()
     addListeners()
-
 }
 
 

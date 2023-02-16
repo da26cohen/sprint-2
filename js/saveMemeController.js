@@ -1,8 +1,5 @@
 'use strict'
 
-
-renderSavedMemes()
-
 function renderSavedMemes(){
     const savedMemesUrl = loadFromStorage(KEY)
     document.querySelector('.gallery-container').style.display =  'none'
