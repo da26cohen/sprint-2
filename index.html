@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>memes!!!</title>
+</head>
+
+<body onload="onInit()">
+    <nav>
+        <img onclick="showGallery()" src="img/LOGO.png" alt="">
+        <ul>
+            <li onclick="showGallery()"> Gallery</li>
+            <li> My Memes</li>
+            <li> About</li>
+        </ul>
+    </nav>
+    <input class="search" type="text" name="search-meme" placeholder="search meme!"
+    oninput="onSetFilterBy(this.value)">
+
+    <div class="gallery-container">
+        
+    </div>
+
+    <div class="meme-edit">
+        <div class="canvas-container">
+            <canvas id="my-canvas" width="500" height="500" style="outline: 1px solid green"></canvas>
+        </div>
+        <div class="tools-place">
+            <div class="tools-btns">
+
+                <div>
+
+                    <!-- <button onclick="onSaveMeme()">💾</button> -->
+                    <img class="editor-btns btn-save" onclick="onSave()" src="img/save.png">
+                    <img class="editor-btns btn-delete" onclick="onDelete(4)" src="img/delete.png">
+
+                </div>
+
+                <div>
+                    <img class="editor-btns btn-switch" onclick="onSwitchLine()"
+                        src="img/up-and-down-opposite-double-arrows-side-by-side.png">
+                    <img class="editor-btns btn-add" onclick="onAddLine()" src="img/add.png">
+                    <img class="editor-btns btn-font" onclick="onFontSize(4)" src="img/a+.png">
+                    <img class="editor-btns btn-font" onclick="onFontSize(-4)" src="img/a-.png">
+                    <img class="editor-btns btn-font" onclick="onAlignText('left')" src="img/align-to-left.png">
+                    <img class="editor-btns btn-font" onclick="onAlignText('center')"
+                        src="img/center-text-alignment.png">
+                    <img class="editor-btns btn-font" onclick="onAlignText('right')" src="img/align-to-right.png">
+                </div>
+
+                <select class="font-form" onchange="onSetFont(this.value)">
+                    <option value="Impact">Impact</option>
+                    <option value="Arial">Arial</option>
+                </select>
+                <input oninput="onSetColor(this.value)" type="color">
+
+            </div>
+
+            <input class="text-input" type="text" oninput="onTextInput(this.value)" placeholder="do your best!">
+            <div class="stickers">
+                <span class="stiker-btn" onclick="onSticker('😛 ')">😛 </span>
+                <span class="stiker-btn" onclick="onSticker('💩')">💩</span>
+                <span class="stiker-btn" onclick="onSticker('🐟')">🐟</span>
+                <span class="stiker-btn" onclick="onSticker('🦁')">🦁</span>
+            </div>
+            <div class="upload">
+                <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+                <img class="editor-btns facebook" onclick="onUploadImg()" src="img/facebook-logo.png">
+                <!-- <button class="btn" onclick="onUploadImg()">share!</button> -->
+                <a href="#" onclick="downloadCanvas(this)" download="file-name">💾</a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/services/meme-service.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/galleryController.js"></script>
+    <script src="js/memeController.js"></script>
+</body>
+
+</html>
