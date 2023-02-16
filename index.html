@@ -17,7 +17,17 @@
             <li onclick="showSavedMeme()"> My Memes</li>
             <li> About</li>
         </ul>
+        <img class="nav-burger" onclick="onShowSideBar()" src="img/sidebar.png">
     </nav>
+
+    <div class="side-bar" style="display: none">
+        <ul class="side-bar-ul">
+            <li class="side-li" onclick="showGallery()">Gallery</li>
+            <li class="side-li" onclick="showSavedMeme()">MyMemes</li>
+            <li class="side-li">About</li>
+        </ul>
+    </div>
+
     <input class="search" type="text" name="search-meme" placeholder="search meme 🔍"
         oninput="onSetFilterBy(this.value)">
 

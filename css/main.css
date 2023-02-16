@@ -50,10 +50,35 @@ li:hover {
     justify-items: center;
 }
 
+.nav-burger {
+    margin-inline-start: auto;
+    max-height: 3em;
+    display: none;
+}
+
+
 .meme-img {
     border-radius: 1em;
     max-width: 16vw;
     object-fit: cover;
+}
+
+.side-bar {
+
+    display: none;
+    position: absolute;
+    min-width: 9rem;
+    right: -30px;
+    z-index: 2;
+}
+
+.side-bar-ul {
+    background-color: #96b0ff;
+    display: flex;
+    flex-direction: column;
+    border: 1.8px solid gray;
+    justify-content: space-between;
+    min-width: 8rem;
 }
 
 .search {
@@ -114,6 +139,13 @@ img:hover {
 }
 
 @media screen and (max-width: 1010px) {
+    ul {
+        display: none;
+    }
+
+    .nav-burger {
+        display: block;
+    }
 
     .meme-edit {
         grid-template-columns: 1fr;
@@ -179,6 +211,7 @@ img:hover {
     height: 41px;
     border-radius: 30%;
 }
+
 
 .text-input {
     border-radius: 25px;
