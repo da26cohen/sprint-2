@@ -1,6 +1,7 @@
 'use strict'
 
 const KEY = 'savedMeme'
+const KEYIMG = 'savedImg'
 var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 var gFilter
 var gImgs = [
@@ -149,6 +150,7 @@ function setDirection(direction) {
 
 function saveMeme(url) {
     saveToStorage(KEY, url)
+    saveToStorage(KEYIMG, gMeme.selectedImgId)
 }
 
 function setFilterBy(filter) {

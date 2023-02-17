@@ -76,9 +76,9 @@ li:hover {
     background-color: #96b0ff;
     display: flex;
     flex-direction: column;
-    border: 1.8px solid gray;
-    justify-content: space-between;
-    min-width: 8rem;
+    align-items: flex-start;
+    border: 2px solid gray;
+    min-width: 10rem;
 }
 
 .search {
@@ -91,6 +91,10 @@ li:hover {
     width: 92vw;
     border: 1px solid var(--color3);
     border-radius: 5em;
+}
+.my-canvas{
+    max-width: 96vw;
+    max-height: 80vh;
 }
 
 .meme-edit {
@@ -174,7 +178,17 @@ img:hover {
         cursor: pointer;
     }
 
+    /* .my-canvas {
+        width: 400px;
+        height: 317px;
+    } */
+
+    .tools-place {
+        font-size: 1.5em;
+    }
+
     .meme-edit {
+
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
@@ -220,4 +234,8 @@ img:hover {
 
 .saved-memes {
     display: none;
+}
+
+.show {
+    display: block;
 }

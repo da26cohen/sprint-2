@@ -95,7 +95,9 @@ function onMemeClick(idx) {
     const elSearch = document.querySelector('.search')
     const elGallery = document.querySelector('.gallery-container')
     const elMemeEdit = document.querySelector('.meme-edit')
+    const elSavedMeme =  document.querySelector('.saved-memes')
     elSearch.style.display = 'none'
+    elSavedMeme.style.display = 'none'
     elGallery.style.display = 'none'
     elMemeEdit.style.display = 'grid'
     updateImg(idx)
@@ -210,7 +212,14 @@ function onSetFilterBy(filter) {
 }
 
 function onShowSideBar() {
-
-    document.querySelector('.side-bar').style.display = 'block'
+    document.querySelector('.side-bar').classList.toggle('show')
+    // document.querySelector('.side-bar').style.display = 'block'
     // document.querySelector('nav-burger').style.display = 'block'
+}
+
+
+function resizeCanvas() {
+    const elContainer = document.querySelector('.canvas-container')
+    gElCanvas.width = elContainer.offsetWidth
+
 }
