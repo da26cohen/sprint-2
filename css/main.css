@@ -92,10 +92,6 @@ li:hover {
     border: 1px solid var(--color3);
     border-radius: 5em;
 }
-.my-canvas{
-    max-width: 96vw;
-    max-height: 80vh;
-}
 
 .meme-edit {
     margin-top: 20px;
@@ -178,13 +174,13 @@ img:hover {
         cursor: pointer;
     }
 
-    /* .my-canvas {
-        width: 400px;
-        height: 317px;
-    } */
+    .my-canvas {
+        max-width: 80vw;
+        max-height: 80vh;
+    }
 
     .tools-place {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .meme-edit {
