@@ -213,8 +213,7 @@ function onSetFilterBy(filter) {
 
 function onShowSideBar() {
     document.querySelector('.side-bar').classList.toggle('show')
-    // document.querySelector('.side-bar').style.display = 'block'
-    // document.querySelector('nav-burger').style.display = 'block'
+
 }
 
 
