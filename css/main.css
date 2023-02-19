@@ -99,7 +99,7 @@ li:hover {
 
 .meme-edit {
     background-color: #96b0ff;
-    margin: 20px auto;
+    margin: 40px auto;
     width: fit-content;
     display: none;
     grid-template-columns: 1fr 1fr;
@@ -133,7 +133,7 @@ img {
 
 img:hover {
     scale: 1.1;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 
@@ -215,15 +215,21 @@ img:hover {
 }
 
 .editor-btns {
+ 
     width: 1.5em;
     height: 1.5em;
     object-fit: cover;
-    margin: 2px;
+    margin: 10px;
+}
+
+.editor-btns:hover{
+scale: 1.4;
 }
 
 .font-form {
     height: 53px;
     border-radius: 50%;
+    margin: 10px;
 }
 
 
