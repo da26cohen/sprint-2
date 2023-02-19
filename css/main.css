@@ -8,11 +8,13 @@ h1 {
 }
 
 body {
+    margin: 3 20px;
     background-color: rgb(182, 234, 242);
     text-align: center;
 }
 
 nav {
+    padding: 0 4px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2em;
@@ -25,8 +27,8 @@ ul {
     color: blueviolet;
     min-width: 40vw;
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+   display: flex;
+   justify-content: flex-end;
 }
 
 li {
@@ -35,6 +37,7 @@ li {
     font-size: 2em;
     cursor: pointer;
     transition: 0.3s;
+    margin-inline-start: 70px;
 }
 
 li:hover {
@@ -42,9 +45,10 @@ li:hover {
     scale: 1.15;
 }
 
+
 .gallery-container {
     display: grid;
-    margin-top: 20px;
+    margin-top: 10px;
     grid-template-columns: repeat(auto-fill, minmax(17vw, 4fr));
     gap: 5px;
     justify-items: center;
@@ -84,7 +88,7 @@ li:hover {
 .search {
     text-align: center;
     font-size: 2em;
-    margin-top: 6px;
+    margin:4px auto;
     color: black;
     background-color: #96b0ff;
     min-height: 4vh;
@@ -94,7 +98,9 @@ li:hover {
 }
 
 .meme-edit {
-    margin-top: 20px;
+    background-color: #96b0ff;
+    margin: 20px auto;
+    width: fit-content;
     display: none;
     grid-template-columns: 1fr 1fr;
     gap: 2px;
@@ -103,7 +109,6 @@ li:hover {
 
 .tools-place {
     display: grid;
-    max-width: 450px;
     justify-content: center;
     align-content: center;
     font-size: 2em;
@@ -114,10 +119,7 @@ li:hover {
     height: 10vh;
 }
 
-.select-color {
-    height: 2.5em;
-    width: 2.5em;
-}
+
 
 .edit-title {
     font-size: 2em;
@@ -130,8 +132,8 @@ img {
 }
 
 img:hover {
-    scale: 1.3;
-
+    scale: 1.1;
+    border: 1px solid blue;
 }
 
 
@@ -220,8 +222,8 @@ img:hover {
 }
 
 .font-form {
-    height: 41px;
-    border-radius: 30%;
+    height: 53px;
+    border-radius: 50%;
 }
 
 

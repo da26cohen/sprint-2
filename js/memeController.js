@@ -110,8 +110,6 @@ function onSave() {
 }
 
 function onDelete() {
-    let res = confirm('are you sure?')
-    if (!res) return
     deleteLines()
     renderMeme()
 }

@@ -23,7 +23,7 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: '',
+            txt: 'do your best',
             size: 40,
             align: 'left',
             color: 'red',
@@ -112,24 +112,24 @@ function setLineDrag(isDrag) {
 }
 
 function deleteLines() {
-    gMeme.lines = [{
-        txt: '',
-        size: 40,
-        align: 'left',
-        color: 'red',
-        font: 'impact',
-        pos: { x: 3, y: 50 },
-        isDrag: false
-
-    }]
-    gMeme.selectedLineIdx = 0
+    const currLineIdx = gMeme.selectedLineIdx
+    gMeme.lines.splice(currLineIdx, 1)
+    gMeme.selectedLineIdx--
 }
 
 
 function setDirection(direction) {
     const { selectedLineIdx: lineIdx, lines } = gMeme
     const currLine = lines[lineIdx]
-    if (lineIdx === 0 && direction === 'right') {
+
+    if (lineIdx === 0 && direction === 'left') {
+        currLine.pos = { x: 0, y: 50 }
+    } else if (lineIdx === 1 && direction === 'left') {
+        currLine.pos = { x: 0, y: 450 }
+    } else if (lineIdx === 2 && direction === 'left') {
+        currLine.pos = { x: 0, y: 250 }
+    }
+    else if (lineIdx === 0 && direction === 'right') {
         currLine.pos = { x: 495, y: 50 }
     } else if (lineIdx === 1 && direction === 'right') {
         currLine.pos = { x: 495, y: 450 }
